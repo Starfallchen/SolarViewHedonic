@@ -2,10 +2,10 @@
 The replication package for PNAS article "Impact of Large-scale Solar on Property Values in the US: Diverse Effects and Causal Mechanisms"
 
 This package include the following items:
-1. SolarSiteData/solar_sites_visibility_PNAS.dta: The LSSPV visibility data for large-scale solar sites in US Large Scale Solar Photovoltaic Database (based on the 2023 version, most recent version is available in https://eerscmap.usgs.gov/uspvdb).
-2. SolarSiteData/solar_sites_visibility_description.dta: A brief introduction of the LSSPV visibility data.
-3. HeterogeneityData/presidential_election2016.dta: Presidential election data to check the potential heterogeneity associated with political leaning.
-4. HeterogeneityData/household_income_ACSST5Y2020.dta: County median income data to check the potential heterogeneity associated with income level. 
+1. Data/solar_sites_visibility_PNAS.dta: The LSSPV visibility data for large-scale solar sites in US Large Scale Solar Photovoltaic Database (based on the 2023 version, most recent version is available in https://eerscmap.usgs.gov/uspvdb).
+2. Data/solar_sites_visibility_description.dta: A brief introduction of the LSSPV visibility data.
+3. Data/presidential_election2016.dta: Presidential election data to check the potential heterogeneity associated with political leaning.
+4. Data/household_income_ACSST5Y2020.dta: County median income data to check the potential heterogeneity associated with income level. 
 5. Stata do file: CoreLogic1_RawDataProcess_MergeTransNProp - Data process from raw CoreLogic dataset
 6. Stata do file: CoreLogic2_DataCleaning - Data cleaning process for the merged transaction and property dataset
 7. Stata do file: CoreLogic3_ArcGISPreprocess - Prepare data for ArcGIS analysis and merge ArcGIS results back
