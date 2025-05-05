@@ -32,6 +32,6 @@ Please contact Zhenshan Chen (zhenshanchen@vt.edu) for any questions regarding t
 ## Citation of the PNAS article (TBA):
 
 ## Reference
-Fujita, K.S., Ancona, Z.H., Kramer, L.A., Straka, M., Gautreau, T.E., Garrity, C.P., Robson, D., Diffendorfer, J.E., and Hoen, B., 2023, United States Large-Scale Solar Photovoltaic Database (v2.0, August, 2024): U.S. Geological Survey and Lawrence Berkeley National Laboratory data release, https://doi.org/10.5066/P9IA3TUS.\
+Fujita, K.S., Ancona, Z.H., Kramer, L.A., Straka, M., Gautreau, T.E., Garrity, C.P., Robson, D., Diffendorfer, J.E., and Hoen, B., 2023, United States Large-Scale Solar Photovoltaic Database (v2.0, August, 2024): U.S. Geological Survey and Lawrence Berkeley National Laboratory data release, https://doi.org/10.5066/P9IA3TUS.  \
 MIT Election Data and Science Lab, U.S. President 1976–2020. Harvard Dataverse. https://doi.org/10.7910/DVN/42MVDX. \
 A. Jarvis, H. Reuter, A. Nelson, E. Guevara, Hole-filled seamless SRTM data V4. International Centre for Tropical Agriculture (CIAT). https://srtm.csi.cgiar.org/. 
