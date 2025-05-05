@@ -20,18 +20,18 @@ This package include the following items:
 16. Python file: Viewshed3_CombineAllViewRas.py
 17. Python file: Viewshed4_IntersectPropwithViewshed.py
 
-Property Data Sharing Limit
+##Property Data Sharing Limit
 Our property transaction data are acquired from CoreLogic Solutions, LLC (https://www.corelogic.com/360-property-data). Restricted by contract with CoreLogic, data derived from raw CoreLogic data cannot be shared. To replicate our study, we recommend acquiring CoreLogic property data with transactions from 1993 to 2020 and applying the data processing code in this replication package.
 
-Elevation Data
+##Elevation Data
 The Digital elevation models (DEMs) data used for viewshed analysis is acquired from the Shuttle Radar Topographic Mission (SRTM) produced by NASA. Data are available at https://srtm.csi.cgiar.org/.
 
-Contact
+##Contact
 Please contact Zhenshan Chen (zhenshanchen@vt.edu) for any questions regarding the code or data files. Please check the article and SI appendix for more information on the codes and data.
 
-Citation of the PNAS article (TBA):
+##Citation of the PNAS article (TBA):
 
-Reference
+##Reference
 Fujita, K.S., Ancona, Z.H., Kramer, L.A., Straka, M., Gautreau, T.E., Garrity, C.P., Robson, D., Diffendorfer, J.E., and Hoen, B., 2023, United States Large-Scale Solar Photovoltaic Database (v2.0, August, 2024): U.S. Geological Survey and Lawrence Berkeley National Laboratory data release, https://doi.org/10.5066/P9IA3TUS.
 MIT Election Data and Science Lab, U.S. President 1976–2020. Harvard Dataverse. https://doi.org/10.7910/DVN/42MVDX. 
 A. Jarvis, H. Reuter, A. Nelson, E. Guevara, Hole-filled seamless SRTM data V4. International Centre for Tropical Agriculture (CIAT). https://srtm.csi.cgiar.org/. 
