@@ -1,0 +1,3 @@
+This is a national-level large-scale solar site dataset based on USPVDB data (see https://energy.usgs.gov/uspvdb/, downloaded in early 2024). The variables are mostly included in USPVDB data already. 
+
+The "visibility" variable is based on the viewshed analysis in the PNAS article, which is detailed in the main text and SI appendix. It is a continuous variable representing the number of properties from which the solar site is visible. Code for this viewshed analysis is also included in this replication package.
