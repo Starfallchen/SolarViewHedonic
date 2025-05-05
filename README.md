@@ -6,9 +6,9 @@ This package include the following items:
 2. Data/solar_sites_visibility_description.dta: A brief introduction of the LSSPV visibility data.
 3. Data/presidential_election2016.dta: Presidential election data to check the potential heterogeneity associated with political leaning.
 4. Data/household_income_ACSST5Y2020.dta: County median income data to check the potential heterogeneity associated with income level. 
-5. Stata do file: CoreLogic1_RawDataProcess_MergeTransNProp - Data process from raw CoreLogic dataset
-6. Stata do file: CoreLogic2_DataCleaning - Data cleaning process for the merged transaction and property dataset
-7. Stata do file: CoreLogic3_ArcGISPreprocess - Prepare data for ArcGIS analysis and merge ArcGIS results back
+5. Stata do file: CoreLogic1_RawDataProcess_MergeTransNProp.do - Data process from raw CoreLogic dataset
+6. Stata do file: CoreLogic2_DataCleaning.do - Data cleaning process for the merged transaction and property dataset
+7. Stata do file: CoreLogic3_ArcGISPreprocess.do - Prepare data for ArcGIS analysis and merge ArcGIS results back
 8. Stata do file: CoreLogic4_GenerateDataforAnalysis.do - Final coreLogic property data processing to generate data for analysis
 9. Stata do file: PNAS_Resi_Home_ExploreDistance.do - Home (below 5 acres) analysis to explore treatment distance specification, including Fig 2
 10. Stata do file: PNAS_Home_Analysis.do - Home (below 5 acres) analysis, including Table 1, Fig 3, Fig 4, Fig S7
