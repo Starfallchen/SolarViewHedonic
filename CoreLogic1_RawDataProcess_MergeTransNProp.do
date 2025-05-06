@@ -16,8 +16,10 @@ global dta "E:\CoreLogic\dta"
 *Bulk
 *process in chunks
 *This takes days
+
 *1
-import delimited "E:\\CoreLogic\\Virginia_Tech_property3_dpc_01580971_20241223_104554_data\\Virginia_Tech_property3_dpc_01580971_20241223_104554_data.txt", clear bindquotes(nobind) stripquote(no) case(preserve)  rowrange(1:50000000) varnames(1)
+*Add raw assessment data directory and name 
+import delimited "E:\\CoreLogic\\...\\..._data.txt", clear bindquotes(nobind) stripquote(no) case(preserve)  rowrange(1:50000000) varnames(1)
 
 drop if MULTIORSPLITPARCELCODE!=""
 drop MULTIORSPLITPARCELCODE
@@ -44,11 +46,9 @@ drop CLIP APNSEQUENCENUMBER TAXACCOUNTNUMBER ALTERNATEPARCELID PREVIOUSPARCELNUM
 save "$dta\CoreLogic_CurAss_SFR_AG_Bulk_1.dta",replace
 
 *2 
-*
 clear all
-import delimited "E:\\CoreLogic\\Virginia_Tech_property3_dpc_01580971_20241223_104554_data\\Virginia_Tech_property3_dpc_01580971_20241223_104554_data.txt", clear bindquotes(nobind) stripquote(no) case(preserve) rowrange(50000001:100000000) varnames(1)
-
-drop if SITUSSTATE=="CA"| SITUSSTATE=="NY" | SITUSSTATE=="NC" | SITUSSTATE=="CT" | SITUSSTATE== "CO"
+*Add raw assessment data directory and name 
+import delimited "E:\\CoreLogic\\...\\..._data.txt", clear bindquotes(nobind) stripquote(no) case(preserve) rowrange(50000001:100000000) varnames(1)
 
 drop if MULTIORSPLITPARCELCODE!=""
 drop MULTIORSPLITPARCELCODE
@@ -74,9 +74,8 @@ save "$dta\CoreLogic_CurAss_SFR_AG_Bulk_2.dta",replace
 
 *3
 clear all
-import delimited "E:\\CoreLogic\\Virginia_Tech_property3_dpc_01580971_20241223_104554_data\\Virginia_Tech_property3_dpc_01580971_20241223_104554_data.txt", clear bindquotes(nobind) stripquote(no) case(preserve) rowrange(100000001:150000000) varnames(1)
-
-drop if SITUSSTATE=="CA"| SITUSSTATE=="NY" | SITUSSTATE=="NC" | SITUSSTATE=="CT" | SITUSSTATE== "CO"
+*Add raw assessment data directory and name 
+import delimited "E:\\CoreLogic\\...\\..._data.txt", clear bindquotes(nobind) stripquote(no) case(preserve) rowrange(100000001:150000000) varnames(1)
 
 drop if MULTIORSPLITPARCELCODE!=""
 drop MULTIORSPLITPARCELCODE
@@ -102,9 +101,8 @@ save "$dta\CoreLogic_CurAss_SFR_AG_Bulk_3.dta",replace
 
 *4
 clear all
-import delimited "E:\\CoreLogic\\Virginia_Tech_property3_dpc_01580971_20241223_104554_data\\Virginia_Tech_property3_dpc_01580971_20241223_104554_data.txt", clear bindquotes(nobind) stripquote(no) case(preserve) rowrange(150000001:200000000) varnames(1)
-
-drop if SITUSSTATE=="CA"| SITUSSTATE=="NY" | SITUSSTATE=="NC" | SITUSSTATE=="CT" | SITUSSTATE== "CO"
+*Add raw assessment data directory and name 
+import delimited "E:\\CoreLogic\\...\\..._data.txt", clear bindquotes(nobind) stripquote(no) case(preserve) rowrange(150000001:200000000) varnames(1)
 
 drop if MULTIORSPLITPARCELCODE!=""
 drop MULTIORSPLITPARCELCODE
@@ -144,7 +142,8 @@ foreach n of numlist 1(1) 10{
 	di `n'
 	local lb = (`n'-1)*50000000 + 1 
 	local ub = (`n')*50000000
-	import delimited "E:\\CoreLogic\\Virginia_Tech_OwnerTransfer_v3_dpc_01580972_20241223_104644_data\\Virginia_Tech_OwnerTransfer_v3_dpc_01580972_20241223_104644_data.txt", clear bindquotes(nobind) stripquote(no) case(preserve) rowrange(`lb':`ub') varnames(1)
+    *Add raw transaction data directory and name 
+	import delimited "E:\\CoreLogic\\...\\..._data.txt", clear bindquotes(nobind) stripquote(no) case(preserve) rowrange(`lb':`ub') varnames(1)
 	drop if SHORTSALEINDICATOR==1
 	drop if FORECLOSUREREOINDICATOR==1
 	drop if FORECLOSUREREOSALEINDICATOR==1
@@ -152,15 +151,14 @@ foreach n of numlist 1(1) 10{
 	drop if INVESTORPURCHASEINDICATOR==1 
 	drop if INTERFAMILYRELATEDINDICATOR==1
 	tab CASHPURCHASEINDICATOR
-	*Cash based arm's length transaction - 8.6 m
+	*Cash based arm's length transaction 
 
 	drop if PENDINGRECORDINDICATOR=="Y"
-	*Could not be matched with tax roll - 4.6 m
+	*Could not be matched with tax roll 
 
 	drop if STANDARDIZEDADDRESSCONFIDENCECOD==""
-	*Unverifiable address - 12.83 m
+	*Unverifiable address 
 
-	*drop if SITUSSTATE=="CA"| SITUSSTATE=="NY" | SITUSSTATE=="NC" | SITUSSTATE=="CT" | SITUSSTATE== "CO"
 	save "$dta\CoreLogic_Trans_Bulk1_`n'.dta",replace
 }
 
