@@ -18,7 +18,7 @@ global X0 "LivingSQFT TotalBathroomNum TotalBedroomNum TotalRoomNum NoofFirePlac
 
 
 ****************************************************
-*	       in Bulks                         *
+*				  in Bulks                         *
 ****************************************************
 *
 foreach n of numlist 1(1)10 {
@@ -37,7 +37,7 @@ foreach n of numlist 1(1)10 {
 	ren SALEDERIVEDDATE SALE_Date
 	ren SALEAMOUNT SalesPrice
 	*Many Mailing Addresses are inconsistent with Parcel Address  -  could study Second Home with this data
-	count if SITUSSTREETADDRESS!= MAILINGSTREETADDRESS   /*1.13 mi out of 4.14 mi */
+	count if SITUSSTREETADDRESS!= MAILINGSTREETADDRESS   
 
 	*Yearbuilt in the assessment file is more populated than in the ownertransfer file - and they are inconcistent for a large share
 	gen BuildingAge_e = SALE_Year - ACTUALYEARBUILTSTATIC 
@@ -69,22 +69,20 @@ foreach n of numlist 1(1)10 {
 	drop if SalesPrice==.
 
 	gen Mul_sale=(DEEDSITUSHOUSENUMBER2STATIC!=""|BUYERMAILINGHOUSENUMBER2!="")
-	drop if Mul_sale==1 /*restriction: 20,937 observations deleted*/
+	drop if Mul_sale==1
 
 	drop if SalesPrice<1000
-	/*restriction: 10,415 observations deleted*/
+	
 
 	*drop price outlier - potential change make the outliers determined in each year
 	sum SalesPrice, detail
 	drop if SalesPrice<=r(p1)|SalesPrice>=r(p99)
-	/*restriction: 69,806 observations deleted*/
-	*3.35 mi sales left
 
 	tab SALE_Year
 	drop if SALE_Year<=1984 
-	/*restriction: 11,904 observations deleted; obviously, many counties do not report sales before 1985 - discontinuous change in sales numbers; dropping to maintain representativeness*/
+
 	drop if RESALEINDICATOR==0
-	*drop new construction sales - restriction: 564 dropped */
+	*drop new construction sales
 
 	tab CASHPURCHASEINDICATOR MORTGAGEPURCHASEINDICATOR
 	*Certain sales are not decided on whether it is with a mortgage loan or not
@@ -98,10 +96,10 @@ foreach n of numlist 1(1)10 {
 	gen BuildingAge_sq = BuildingAge_e*BuildingAge_e
 
 	tab NoofBuildings
-	drop if NoofBuildings!=1 /*restriction: 7,319 observations deleted*/
+	drop if NoofBuildings!=1 
 	drop if NoofUnits>1 & NoofUnits!=.
 
-	drop if NoofFirePlace>10 & NoofFirePlace!=. /*restriction: 24 observations deleted*/
+	drop if NoofFirePlace>10 & NoofFirePlace!=. 
 	replace NoofFirePlace=0 if NoofFirePlace==.
 
 	foreach v in TotalBathroomNum TotalBedroomNum NoofStories {
@@ -178,3 +176,4 @@ foreach n of numlist 1(1)10 {
 	global CATE1_FE "i.Aircondition i.Heated i.BuildingCondition i.BuildingType i.Garage i.Pool i.FuelType i.SewerType i.WaterType"
 	save "$dta\CoreLogic_Cleaned_Bulk_`n'.dta",replace
 }
+
