@@ -1,9 +1,12 @@
 
 clear all
 set more off
-global root "E:\CoreLogic"
-global dta "E:\CoreLogic\dta"
-global AgSolar "E:\VT\Solar_AgValue"
+
+*Specify directories
+
+global root ""
+global dta ""
+global AgSolar ""
 global GIS  "$AgSolar\GIS"
 
 ******************************************************
@@ -67,6 +70,7 @@ keep if ACRES<5
 tab Ag SFR
 
 keep if SFR==1
+drop if NoofBuildings!=1 /*restriction: only apply to home*/
 
 cap drop ID
 gen ID=_n
