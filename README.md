@@ -15,10 +15,10 @@ This package include the following items:
 11. Stata do file: PNAS_Land_Analysis.do - Land (above 5 acres) analysis, including Fig 5, Fig S5, Fig S6 
 12. Stata do file: PNAS_AppendixRobust.do - Robustness check, including Table S6, Table S7, Table S8, Table S9,
 13. Stata do file: PNAS_PlaceboTest.do - Placebo test, including Table S5
-14. Python file: Viewshed1_OutlineToPts.py
-15. Python file: Viewshed2_ViewofSolarSitePts.py
-16. Python file: Viewshed3_CombineAllViewRas.py
-17. Python file: Viewshed4_IntersectPropwithViewshed.py
+14. Python file: Viewshed1_OutlineToPts.py - Start the viewshed analysis, breaking polygon into view points
+15. Python file: Viewshed2_ViewofSolarSitePts.py - Calculate the viewshed of solar site view points
+16. Python file: Viewshed3_CombineAllViewRas.py - Combine viewsheds from all solar site view points nationwide
+17. Python file: Viewshed4_IntersectPropwithViewshed.py - Intersect the the combined viewshed with property points
 
 ## Property Data Sharing Limit
 Our property transaction data are acquired from CoreLogic Solutions, LLC (https://www.corelogic.com/360-property-data). Restricted by contract with CoreLogic, data derived from raw CoreLogic data cannot be shared. To replicate our study, we recommend acquiring CoreLogic property data with transactions from 1993 to 2020 and applying the data processing code in this replication package.
