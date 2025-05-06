@@ -96,7 +96,7 @@ foreach n of numlist 1(1)10 {
 	gen BuildingAge_sq = BuildingAge_e*BuildingAge_e
 
 	tab NoofBuildings
-	drop if NoofBuildings!=1 
+	*drop if NoofBuildings!=1 /*restriction: only apply to home*/
 	drop if NoofUnits>1 & NoofUnits!=.
 
 	drop if NoofFirePlace>10 & NoofFirePlace!=. 
