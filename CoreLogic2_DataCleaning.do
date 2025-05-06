@@ -4,14 +4,6 @@ set more off
 global root "E:\CoreLogic"
 global dta "E:\CoreLogic\dta"
 
-/*
-foreach State in CA NC NY {
-	use "$dta\CoreLogic_Merged_CA_NY_NC.dta",clear
-	keep if SITUSSTATE=="`State'"
-	save ,replace
-}
-*/
-
 *Check DocumentTypeCode with CoreLogic
 
 *********************************
@@ -26,7 +18,7 @@ global X0 "LivingSQFT TotalBathroomNum TotalBedroomNum TotalRoomNum NoofFirePlac
 
 
 ****************************************************
-*				  in Bulks                         *
+*	       in Bulks                         *
 ****************************************************
 *
 foreach n of numlist 1(1)10 {
@@ -186,5 +178,3 @@ foreach n of numlist 1(1)10 {
 	global CATE1_FE "i.Aircondition i.Heated i.BuildingCondition i.BuildingType i.Garage i.Pool i.FuelType i.SewerType i.WaterType"
 	save "$dta\CoreLogic_Cleaned_Bulk_`n'.dta",replace
 }
-
-
