@@ -1,8 +1,9 @@
 
 clear all
 set more off
-global root "E:\CoreLogic"
-global dta "E:\CoreLogic\dta"
+*Specify directories
+global root ""
+global dta ""
 
 *Check DocumentTypeCode with CoreLogic
 
