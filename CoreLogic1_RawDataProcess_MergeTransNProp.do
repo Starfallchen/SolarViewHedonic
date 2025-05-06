@@ -1,8 +1,9 @@
 
 clear all
 set more off
-global root "E:\CoreLogic\CT"
-global dta "E:\CoreLogic\dta"
+*Specify directories
+global root ""
+global dta ""
 
 *******************************************************
 *  Property Data - Get SFR and Ag/Vacant then Clean   *
