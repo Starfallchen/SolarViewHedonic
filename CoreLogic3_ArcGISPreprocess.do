@@ -86,7 +86,7 @@ use "$dta\CoreLogicProp_All_Analysis_Bulk.dta",clear
 keep if ACRES>=5 & ACRES!=.
 tab Ag SFR
 drop if NoofBuildings!=1 & SFR==1 
-drop if NoofBuildings>=1 & Ag==1 
+drop if (NoofBuildings>=1 & NoofBuildings!=.) & Ag==1 
 
 cap drop ID
 gen ID=_n
