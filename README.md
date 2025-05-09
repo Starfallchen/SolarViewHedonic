@@ -1,5 +1,5 @@
 # SolarViewHedonic
-The replication package for PNAS article "Impact of Large-scale Solar on Property Values in the US: Diverse Effects and Causal Mechanisms"
+The replication package for PNAS article "Impact of Large-scale Solar on Property Values in the US: Diverse Effects and Causal Mechanisms" by Chenyang Hu, Zhenshan Chen, Pengfei Liu, Wei Zhang, Xi He, and Darrell Bosch.
 
 This package include the following items:
 1. Data/solar_sites_visibility_PNAS.dta: The LSSPV visibility data for large-scale solar sites in US Large Scale Solar Photovoltaic Database (based on the 2023 version, most recent version is available in https://eerscmap.usgs.gov/uspvdb).
